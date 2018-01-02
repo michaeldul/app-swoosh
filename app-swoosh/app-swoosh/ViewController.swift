@@ -17,10 +17,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Programaticly set up screen
         //Swoosh always be in the middle of the screen
-        swoosh.frame = CGRect(x: view.frame.size.width / 2 - swoosh.frame.size.width / 2, y: 50, width: swoosh.frame.size.width, height: swoosh.frame.size.height)
+        //swoosh.frame = CGRect(x: view.frame.size.width / 2 - swoosh.frame.size.width / 2, y: 50, width: swoosh.frame.size.width, height: swoosh.frame.size.height)
         //Background to be the view
-        bgImg.frame = view.frame
+        //bgImg.frame = view.frame
     }
 
     override func didReceiveMemoryWarning() {
