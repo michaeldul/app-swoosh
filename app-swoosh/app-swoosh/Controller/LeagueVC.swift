@@ -10,17 +10,37 @@ import UIKit
 
 class LeagueVC: UIViewController {
 
+    var player: Player!
+    
+    //IBOutlets
+    @IBOutlet weak var nextBtn: BorderButton!
+    
+    @IBAction func onNextTapped(_ sender: Any) {
+        performSegue(withIdentifier: "skillVCSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        player = Player()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //IBActions
+    @IBAction func onMensTapped(_ sender: Any) {
+        selectLeague(leagueType: "mens")
+    }
+    @IBAction func onWomensTapped(_ sender: Any) {
+        selectLeague(leagueType: "womens")
+    }
+    @IBAction func onCoedTapped(_ sender: Any) {
+        selectLeague(leagueType: "coed")
     }
     
+    //Functions
+    func selectLeague(leagueType: String) {
+        player.selectedLeague = leagueType
+        nextBtn.isEnabled = true
+    }
 
     /*
     // MARK: - Navigation
@@ -31,5 +51,10 @@ class LeagueVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillVC = segue.destination as? SkillVC {
+            skillVC.player = player
+        }
+    }
 
 }

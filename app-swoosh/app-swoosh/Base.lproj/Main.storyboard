@@ -144,6 +144,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.98906983459999998" green="0.99864307139999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="MKU-9P-DgG" eventType="touchUpInside" id="DYL-lC-ytJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN2-qb-oye" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="335" height="50"/>
@@ -155,6 +158,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.98906983459999998" green="0.99864307139999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="MKU-9P-DgG" eventType="touchUpInside" id="iMx-cp-FsT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpG-lm-51P" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="335" height="50"/>
@@ -166,10 +172,13 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.98906983459999998" green="0.99864307139999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="MKU-9P-DgG" eventType="touchUpInside" id="xCk-jg-jvo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmO-FA-gua" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmO-FA-gua" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="597" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -179,6 +188,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.98906983459999998" green="0.99864307139999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="MKU-9P-DgG" eventType="touchUpInside" id="zma-yN-GgO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIx-Ot-Rc6">
                                 <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -212,6 +224,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sdc-BB-ib2"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="bmO-FA-gua" id="H9v-1q-7Ek"/>
+                        <segue destination="oRN-ZB-8e6" kind="show" identifier="skillVCSegue" id="c7P-pc-mS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uND-yR-2CT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Lby-Kk-f14" userLabel="Exit" sceneMemberID="exit"/>
